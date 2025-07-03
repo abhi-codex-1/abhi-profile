@@ -36,7 +36,7 @@ background-clip: content-box, border-box;
   display: block;
 }
 h1 {
-  font-size: 24px;
+  font-size: clamp(22px, 5vw, 32px);
   font-weight: bold;
   background: linear-gradient(to right, #00ffff, #8a2be2);
   -webkit-background-clip: text;
@@ -45,7 +45,7 @@ h1 {
 .designer-title {
   position: relative;
   display: inline-block;
-  font-size: 14px;
+  font-size: clamp(12px, 3.5vw, 18px);
   font-weight: 500;
   color: #aaa;
   margin-bottom: 16px;
@@ -75,12 +75,14 @@ h3 {
   margin: 4px 0;
 
 }
- body {
- background-image: url('https://i.postimg.cc/dQ9FBPFV/20250701-1432-Futuristic-Abstract-Geometry-simple-compose-01jz2kgwckfgb8sjgx39b3chsk.png');
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center center;
-background-attachment: fixed;
+body {
+  max-width: 500px;
+  margin: auto;
+  background-image: url('https://i.postimg.cc/dQ9FBPFV/20250701-1432-Futuristic-Abstract-Geometry-simple-compose-01jz2kgwckfgb8sjgx39b3chsk.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
   min-height: 100vh;
   color: white;
  font-family: "Trebuchet MS";
@@ -88,6 +90,7 @@ background-attachment: fixed;
  }
 .link-button {
   display: flex;
+  flex: wrap;
   align-items: center;
   justify-content: flex-start;
   gap: 11px;
@@ -186,4 +189,33 @@ a {
 .credit:hover {
   color: #fff;
   opacity: 3;
+}
+@media (max-width: 600px;){
+  body{
+    padding: 10px;
+  }
+  .link-button{
+    flex-direction: row;
+    padding: 10px;
+    gap: 8px;
+    font-size: 14px;
+  }
+  .link-button .thumb{
+    width: 24px;
+    height: 24px;
+  }
+  .link-button .share-btn{
+    font-size: 14px;
+    padding: 4px;
+
+  }
+  h6{
+    font-size: 12px;
+
+  }
+  .profile-pic{
+    width: 80px;
+    height: 80px;
+  }
+
 }
