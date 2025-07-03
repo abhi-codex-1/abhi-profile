@@ -1,0 +1,189 @@
+h6{
+  background-color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  color: darkblue;
+}
+p{
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #FFFFFF;
+text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+
+}
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background-image: linear-gradient(#000, #000), linear-gradient(to right, #00ffff, #8a2be2);
+background-origin: border-box;
+background-clip: content-box, border-box;
+  box-shadow:
+  -5px 0 10px #00ffff,
+  5px 0 12px #8a2be2,
+  0 0 24px rgba(0, 255, 255, 0.3),
+  0 0 32px rgba(138, 43, 226, 0.3);
+  object-fit: cover;
+  margin: 10px auto;
+  display: block;
+}
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(to right, #00ffff, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.designer-title {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #aaa;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  font-style: italic;
+}
+
+.designer-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to right, #00ffff, #8a2be2);
+  border-radius: 2px;
+  opacity: 0.5;
+}
+h3 {
+ font-size: 8px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.university{
+  font-size: 12px;
+  color: lightcyan;
+  margin: 4px 0;
+
+}
+ body {
+ background-image: url('https://i.postimg.cc/dQ9FBPFV/20250701-1432-Futuristic-Abstract-Geometry-simple-compose-01jz2kgwckfgb8sjgx39b3chsk.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+  min-height: 100vh;
+  color: white;
+ font-family: "Trebuchet MS";
+ text-align: center;
+ }
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 11px;
+  width: 90%;
+  max-width: 350px;
+  margin: 14px auto;
+  padding: 12px 8px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.link-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.03);
+}
+.link-button .thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.link-button .link-text {
+  flex-grow: 1;
+  padding-left: 8px;
+  text-align: left;
+}
+
+.link-button .share-btn {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 6px;
+  margin-left: auto;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+/* === Zoom-in (smooth, 0–1s) === */
+@keyframes zoomInOnce {
+  0%, 49.9%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+}
+
+/* === Common settings === */
+.link-button {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+/* === Zoom for buttons 1 & 4 === */
+.link-button:nth-of-type(1),
+.link-button:nth-of-type(2),
+.link-button:nth-of-type(3),
+.link-button:nth-of-type(4),
+.link-button:nth-of-type(5){
+  animation-name: zoomInOnce;
+}
+
+
+a {
+ background-color: white;
+ font-size: 15px;
+ border-radius: 10px;
+ padding: 10px;
+ display: block;
+ text-align: center;
+ margin: 10px;
+ color: slateblue;
+}
+.credit {
+  font-size: 12px;
+  color: #888;
+  margin-top: 40px;
+  text-align: center;
+  opacity: 0.7;
+}
+.credit:hover {
+  color: #fff;
+  opacity: 3;
+}
