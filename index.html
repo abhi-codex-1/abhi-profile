@@ -9,27 +9,58 @@
 content="width=device-width,
 initial-scale=1.0>"
  <body>
-   <h6>Welcome to My Space</h6>
+  <div id="shareSiteBtn" onclick="shareSite()">🔗</div>
+
+  <img id="qrButton" src="https://img.icons8.com/ios-filled/50/ffffff/qr-code.png" onclick="toggleQR()" alt="QR">
+   
+<div id="qrOverlay">
+  <button id="qrCloseBtn" onclick="toggleQR()" aria-label="Close QR">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="white">
+    <path d="M 7.21875 5.78125 L 5.78125 7.21875 L 14.5625 16 L 5.78125 24.78125 L 7.21875 26.21875 L 16 17.4375 L 24.78125 26.21875 L 26.21875 24.78125 L 17.4375 16 L 26.21875 7.21875 L 24.78125 5.78125 L 16 14.5625 Z" />
+  </svg>
+  </button>
+  <div class="qr-content">
+    <img id="qrImage" src="https://api.qrserver.com/v1/create-qr-code/?data=https://u46wom.mimo.run/index.html&size=200x200" alt="QR Code">
+    <p id="qrText">abhi-profile.netlify.app</p>
+    <button id="copyLinkBtn" onclick="copyLink()">📋 Copy Link</button>
+  </div>
+</div>
+
+  <h6>Welcome to My Space</h6>
+
  <img src="https://i.postimg.cc/DyTnphy4/00bc76661f5ddd0bffd3f241c997ada6.jpg" class= "profile-pic" width="100" height="100">
+
   <h1>Abhijeet Anand</h1>
-  <h2 class="designer-title">Professional Coder💻</h2>
+
+  <h2 class="designer-title">Begginer Coder💻</h2>
+
    <a class="link-button" href="t.me/O_abhi_o" target="_blank">
   <img class="thumb" src="https://i.postimg.cc/G3Nt45P7/e1eabd818719a0aa73b8f0bd079f45e0.jpg" alt="Telegram"><span>0_abhi_o</span>
      <button class="share-btn" onclick="shareLink('t.me/O_abhi_o')">🔗</button>
    </a>
-  <a href="https://music.youtube.com/playlist?list=PLDKZdy6nXFmyFpDC4e1JvNjOqbL3KW6D-&si=4vyUu1rK2zn9yr2W" class="link-button">
+
+  <a class="link-button"  href="https://music.youtube.com/playlist?list=PLDKZdy6nXFmyFpDC4e1JvNjOqbL3KW6D-&si=4vyUu1rK2zn9yr2W" target="_blank">
   <img src="https://i.postimg.cc/Pqfrgzyk/Screenshot-2025-07-03-10-14-58-163-com-pinterest.png" alt="YoutubeMusic" class="thumb">
-  <span>dedicated to her❤‍🩹</span>
+  <span>Dedicated to her❤‍🩹</span>
     <button class="share-btn" onclick="shareLink('https://music.youtube.com/playlist?list=PLDKZdy6nXFmyFpDC4e1JvNjOqbL3KW6D-&si=4vyUu1rK2zn9yr2W')">🔗</button>
   </a>
-   <a href="https://music.youtube.com/playlist?list=PLDKZdy6nXFmwdSCqr85dhuX7AmwtKCy5D&si=VRfgtPIENvKCIVUs" target: _blank; class="link-button">
+
+   <a class="link-button" href="https://music.youtube.com/playlist?list=PLDKZdy6nXFmwdSCqr85dhuX7AmwtKCy5D&si=VRfgtPIENvKCIVUs" target="_blank">
   <img src="https://i.postimg.cc/yYrsWgFF/22f4285d816b01de00ebfd1dcc99fa72.jpg" alt="YoutubeMusic" class="thumb">
   <span>Bhojpuri Mood💀</span>
-     <button class="share-btn" onclick="shareLink('https://music.youtube.com/playlist?list=PLDKZdy6nXFmwdSCqr85dhuX7AmwtKCy5D&si=VRfgtPIENvKCIVUs')">🔗</button>
+     <button class="share-btn" onclick="event.stopPropagation();
+    shareLink('https://music.youtube.com/playlist?list=PLDKZdy6nXFmwdSCqr85dhuX7AmwtKCy5D&si=VRfgtPIENvKCIVUs')">🔗</button>
    </a>
+
    <a class="link-button" href="https://www.snapchat.com/add/itzabhi_anand?share_id=QOVEjmG2olI&locale=en-IN" target="_blank">
   <img class="thumb" src="https://i.postimg.cc/FFxYY8L4/Screenshot-2025-07-03-10-07-16-773-com-snapchat-android.png" alt="Snapchat"><span>abhianand_05</span>
      <button class="share-btn" onclick="shareLink('https://www.snapchat.com/add/itzabhi_anand?share_id=QOVEjmG2olI&locale=en-IN')">🔗</button>
    </a>
+
+   <audio id="bgMusic" loop>
+  <source src="https://www.dropbox.com/scl/fi/90jr3us73ozqs413niw4k/Prakhand-Ho-Ya-Jila-Babuaan-Se-Hila-Lofi-Song-Slowed-Reverb-_-Pawan-Singh-Lofi-Song-mp3cut.net.mp3?rlkey=kh18junu4ykskhacselfd5ivj&st=isekh72t&raw=1" type="audio/mp3">
+   </audio>
+   <div id="musicButton" onclick="toggleMusic()">🎶</div>
+
  </body>
 </html>
