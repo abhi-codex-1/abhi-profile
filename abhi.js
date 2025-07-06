@@ -70,3 +70,52 @@ document.addEventListener("click", () => {
     hasInteracted = true;
   }
 });
+
+const profilePhoto = document.getElementById("profilePhoto");
+const landingPage = document.getElementById("landingPage");
+const mainPage = document.getElementById("mainPage");
+const mainProfilePic = document.getElementById("mainProfilePic");
+
+profilePhoto.addEventListener("click", () => {
+  // Get viewport width to center the image
+  const viewportWidth = window.innerWidth;
+  const targetX = (viewportWidth / 2) - (profilePhoto.offsetWidth / 2);
+  const targetY = 60; // Adjust based on where you want it (top center)
+
+  const currentRect = profilePhoto.getBoundingClientRect();
+  const currentX = currentRect.left;
+  const currentY = currentRect.top;
+
+  const deltaX = targetX - currentX;
+  const deltaY = targetY - currentY;
+
+  // Set fixed position for the profile photo
+  profilePhoto.style.position = "fixed";
+  profilePhoto.style.left = `${currentX}px`;
+  profilePhoto.style.top = `${currentY}px`;
+  profilePhoto.style.zIndex = "9999";
+  profilePhoto.style.transition = "transform 1.2s ease-in-out";
+
+  // Move it to top center
+  requestAnimationFrame(() => {
+    profilePhoto.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+  });
+
+  // Transition after animation
+  setTimeout(() => {
+    landingPage.style.opacity = "0";
+
+    setTimeout(() => {
+      landingPage.style.display = "none";
+      mainPage.style.display = "flex";
+      mainPage.style.opacity = "0";
+
+      setTimeout(() => {
+        mainPage.style.transition = "opacity 0.6s ease-in-out";
+        mainPage.style.opacity = "1";
+        mainProfilePic.style.visibility = "visible";
+        profilePhoto.style.display = "none";
+      }, 50);
+    }, 400);
+  }, 1200);
+});
