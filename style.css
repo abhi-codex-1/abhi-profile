@@ -368,3 +368,63 @@ body {
 #mainPage {
   transition: opacity 0.6s ease-in-out;
 }
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  h2.designer-title {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .profile-pic,
+  #mainProfilePic,
+  .profile-photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .link-button {
+    flex-direction: row;  /* keep layout horizontal */
+    gap: 8px;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  .thumb {
+    width: 42px;
+    height: 42px;
+  }
+
+  .share-btn {
+    font-size: 1rem;
+    padding: 6px;
+  }
+
+  #musicButton,
+  #shareSiteBtn {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .qr-content {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .instruction {
+    font-size: 0.95rem;
+  }
+
+  p.last {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
